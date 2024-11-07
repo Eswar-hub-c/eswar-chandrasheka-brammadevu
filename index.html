@@ -97,7 +97,7 @@
         const message = document.getElementById("message").value;
 
         // Send the form data to EmailJS using sendForm
-        emailjs.sendForm("template_ha122wr", "your_template_id_here", form)
+        emailjs.sendForm("template_ha122wr", "template_ha122wr", form)
             .then(function(response) {
                 // Sending a thank you email (email sent to you)
                 emailjs.send("service_smtx965", "template_ha122wr", {
