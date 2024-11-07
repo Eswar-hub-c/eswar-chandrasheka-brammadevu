@@ -58,31 +58,29 @@
     
     <!-- Social Media Links -->
     <div class="social-media">
-        <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-        <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/eswar-chandrashekar-brammadevu-python-developer/" target="_blank">Twitter</a>
+        <a href="https://www.linkedin.com/in/eswar-chandrashekar-brammadevu-python-developer/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Eswar-hub-c" target="_blank">GitHub</a>
     </div>
-    
     <!-- Contact Form -->
-    <form id="contact-form">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="message">Your Message</label>
-        <textarea id="message" name="message" required></textarea>
-        
-        <button type="submit">Send Message</button>
-    </form>
-</section>
+<form id="contact-form">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" required></textarea>
+    
+    <button type="submit">Send Message</button>
+</form>
 
 <!-- Add the EmailJS script -->
 <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
     // Initialize EmailJS with your user ID
-    emailjs.init("service_smtx965"); // Replace with your EmailJS user ID
+    emailjs.init("your_user_id_here"); // Replace with your EmailJS user ID
 
     // Get the form element
     const form = document.getElementById("contact-form");
@@ -91,26 +89,11 @@
     form.addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent the default form submission
 
-        // Get the values from the form
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
-
         // Send the form data to EmailJS using sendForm
-        emailjs.sendForm("template_ha122wr", "template_ha122wr", form)
+        emailjs.sendForm("service_smtx965", "template_ha122wr", form)
             .then(function(response) {
-                // Sending a thank you email (email sent to you)
-                emailjs.send("service_smtx965", "template_ha122wr", {
-                    to_name: "Eswar Chandrashekar", // Recipient Name (you)
-                    from_name: name, // Sender's Name
-                    from_email: email, // Sender's Email
-                    message: message // Message Content
-                }).then(function(response) {
-                    alert("Message sent successfully! Thank you for reaching out.");
-                    form.reset(); // Clear the form
-                }, function(error) {
-                    alert("Failed to send the message. Please try again.");
-                });
+                alert("Message sent successfully! Thank you for reaching out.");
+                form.reset(); // Clear the form
             }, function(error) {
                 alert("Failed to send the message. Please try again.");
             });
