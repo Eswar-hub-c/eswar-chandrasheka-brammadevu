@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eswar Chandrashekar Brammadevu - Web Developer</title>
+    <link rel="stylesheet" href="index.css"> <!-- Link to an external CSS file for styling -->
+</head>
+<body>
+    <!-- Navbar with toggle for mobile view -->
+<nav>
+    <h1>Eswar Chandrashekar Brammadevu</h1>
+    <div class="nav-toggle">☰</div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Skills Section with Progress Bars -->
+<section id="home">
+    <div class="home-content">
+        <h1>Eswar Chandrashekar Brammadevu</h1>
+        <p>A passionate web developer focused on building responsive, interactive websites.</p>
+        <img src="image.png_0.webp" width="640" height="640">
+    </div>
+    <div class="skills">
+        <h2>Skills</h2>
+        <div class="skills-bar" data-skill-level="85">HTML - 85%</div>
+        <div class="skills-bar" data-skill-level="80">CSS - 80%</div>
+        <div class="skills-bar" data-skill-level="75">JavaScript - 75%</div>
+        <div class="skills-bar" data-skill-level="70">React - 70%</div>
+    </div>
+</section>
+    <!-- Portfolio Page Section -->
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="project">
+            <img src="image.png" alt="Personal Portfolio Website" class="project-img">
+            <h3>Personal Portfolio Website</h3>
+            <p>A SEO-optimized portfolio built using Nuxt.js, showcasing my projects and skills with responsive design and fast load times. <a href="https://github.com/yourportfolio" target="_blank">View on GitHub</a></p>
+        </div>
+        <div class="project">
+            <img src="data-analysis-concept-illustration_114360-8053.avif" alt="Sentiment Analysis Tool" class="project-img">
+            <h3>Sentiment Analysis Tool</h3>
+            <p>A Python-based sentiment analysis tool that boosts insight accuracy by 30%, designed for businesses to make data-informed decisions. <a href="https://github.com/yoursentimenttool" target="_blank">View on GitHub</a></p>
+        </div>
+        <!-- Add more projects here -->
+    </section>
+
+    <!-- Contact Page Section -->
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:eswarchandrashekar5@gmail.com">eswarchandrashekar5@gmail.com</a></p>
+    <p>Address: Vijayawada, Andhra Pradesh, India</p>
+    <p>Location: Available for Remote Work</p>
+    
+    <!-- Social Media Links -->
+    <div class="social-media">
+        <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+    </div>
+    
+    <!-- Contact Form -->
+    <form id="contact-form">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<!-- Add the EmailJS script -->
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    // Initialize EmailJS with your user ID
+    emailjs.init("eswarchandrashekar5@gmail.com"); // Replace with your EmailJS user ID
+
+    // Get the form element
+    const form = document.getElementById("contact-form");
+
+    // Handle the form submission
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Send the form data to EmailJS using sendForm
+        emailjs.sendForm("service_smtx965", "eswarchandrashekar5@gmail.com", form)
+            .then(function(response) {
+                alert("Message sent successfully!");
+                form.reset(); // Clear the form
+            }, function(error) {
+                alert("Failed to send the message. Please try again.");
+            });
+    });
+</script>
+
+    <footer>
+        <p>&copy; 2024 Eswar Chandrashekar Brammadevu. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

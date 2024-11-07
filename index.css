@@ -1,0 +1,296 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+nav h1 {
+    display: flex;
+    
+    font-size: 1.2rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00bcd4;
+}
+
+/* Home Section */
+#home {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(to right, #00bcd4, #2196f3);
+    color: #fff;
+}
+
+.home-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.home-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top: 1rem;
+    object-fit: cover;
+}
+
+.buttons {
+    margin-top: 2rem;
+}
+
+.buttons .btn {
+    background-color: #fff;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.buttons .btn:hover {
+    background-color: #00bcd4;
+    color: #fff;
+}
+
+/* Skills Section */
+.skills {
+    padding: 2rem;
+    background-color: #e0eb4f;
+}
+
+/* Portfolio Section */
+#portfolio {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#portfolio h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.project {
+    margin-bottom: 2rem;
+}
+
+.project-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    color: #00bcd4;
+    margin-bottom: 0.5rem;
+}
+
+.project p {
+    color: #333;
+}
+
+/* Contact Section */
+#contact {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+#contact p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 0.5rem;
+    color: #333;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #00bcd4;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #2196f3;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 0.875rem;
+}
+
+/* Navbar Styling for Toggle */
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.nav-links.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        text-align: center;
+    }
+    .nav-links.active {
+        display: block;
+    }
+    /* Media Queries for Responsiveness */
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-content p {
+        font-size: 1.1rem;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .skills h2 {
+        font-size: 1.5rem;
+    }
+
+    .skills-bar {
+        height: 25px;
+    }
+}
+
+/* Skills Progress Bars */
+.skills {
+    margin-top: 2rem;
+    text-align: left;
+    max-width: 600px;
+    margin: auto;
+}
+
+.skills-bar {
+    background: #e0e0e0;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    line-height: 2rem;
+    transition: width 1s ease-in-out;
+}
+
+[data-skill-level="85"] {
+    background-color: #4caf50;
+}
+
+[data-skill-level="80"] {
+    background-color: #2196f3;
+}
+
+[data-skill-level="75"] {
+    background-color: #ff9800;
+}
+
+[data-skill-level="70"] {
+    background-color: #f44336;
+}
