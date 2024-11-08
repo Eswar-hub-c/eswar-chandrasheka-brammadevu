@@ -118,6 +118,7 @@ nav ul li a:hover {
 #portfolio {
     padding: 4rem 2rem;
     text-align: center;
+    background-color: #f9f9f9;
 }
 
 #portfolio h2 {
@@ -126,8 +127,38 @@ nav ul li a:hover {
     margin-bottom: 2rem;
 }
 
+/* Portfolio container for side scrolling */
+.portfolio-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #00bcd4 #e0e0e0; /* Firefox */
+}
+
+.portfolio-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.portfolio-container::-webkit-scrollbar-thumb {
+    background-color: #00bcd4;
+    border-radius: 4px;
+}
+
+.portfolio-container::-webkit-scrollbar-track {
+    background: #e0e0e0;
+}
+
+/* Project cards for consistency */
 .project {
-    margin-bottom: 2rem;
+    min-width: 250px; /* Adjust as needed */
+    flex: 0 0 auto; /* Prevents flex items from growing or shrinking */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: left;
 }
 
 .project-img {
@@ -145,6 +176,7 @@ nav ul li a:hover {
 
 .project p {
     color: #333;
+    font-size: 1rem;
 }
 
 /* Contact Section */
