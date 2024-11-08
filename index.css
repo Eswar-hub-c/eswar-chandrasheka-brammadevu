@@ -250,7 +250,7 @@ footer p {
         display: block;
     }
     /* Media Queries for Responsiveness */
-    .home-content {
+      .home-content {
         flex-direction: column;
     }
 
