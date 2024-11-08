@@ -66,8 +66,8 @@
 <!-- Add the EmailJS script -->
 <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
-    // Initialize EmailJS with your user ID
-    emailjs.init("q9VZsiA3fW3VXWLu0");  // Replace with your EmailJS user ID
+    // Initialize EmailJS with your public key
+    emailjs.init("YOUR_PUBLIC_KEY");  // Replace with your EmailJS public key
 
     // Get the form element
     const form = document.getElementById("contact-form");
@@ -76,18 +76,13 @@
     form.addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent the default form submission
 
-        // Get the form values
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
-
-        // Log the values to debug
-        console.log("Name:", name);
-        console.log("Email:", email);
-        console.log("Message:", message);
+        // Log the form values for debugging
+        console.log("Name:", document.getElementById("name").value);
+        console.log("Email:", document.getElementById("email").value);
+        console.log("Message:", document.getElementById("message").value);
 
         // Send the form data to EmailJS using sendForm
-        emailjs.sendForm("service_smtx965", "template_ha122wr", form)
+        emailjs.sendForm("service_smtx965", "template_ha122wr", form, "YOUR_PUBLIC_KEY")
             .then(function(response) {
                 alert("Message sent successfully! Thank you for reaching out.");
                 form.reset(); // Clear the form
