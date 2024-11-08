@@ -81,15 +81,15 @@
         form.addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent the default form submission
 
-            // Send the form data to EmailJS using sendForm
-            emailjs.sendForm("service_smtx965", "template_ha122wr", form, "q9VZsiA3fW3VXWLu0")
-                .then(function(response) {
-                    alert("Message sent successfully! Thank you for reaching out.");
-                    form.reset(); // Clear the form
-                }, function(error) {
-                    console.log("Error:", error); // Log error details to debug
-                    alert("Failed to send the message. Please try again.");
-                });
+           emailjs.sendForm("service_smtx965", "template_ha122wr", form, "q9VZsiA3fW3VXWLu0")
+    .then(function(response) {
+        console.log("Success!", response.status, response.text);
+        alert("Message sent successfully! Thank you for reaching out.");
+        form.reset(); // Clear the form
+    }, function(error) {
+        console.error("Failed to send the message:", error); // Log detailed error info
+        alert("Failed to send the message. Please try again.");
+    });
         });
     </script>
 
