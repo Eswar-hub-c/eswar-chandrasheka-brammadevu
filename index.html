@@ -43,15 +43,16 @@
         <div class="project">
             <img src="image.png" alt="Screenshot of Personal Portfolio Website" class="project-img">
             <h3>Personal Portfolio Website</h3>
-            <p>A SEO-optimized portfolio built using Nuxt.js, showcasing my 
-                projects and skills with responsive design and fast load times. 
-                <a href="https://github.com/Eswar-hub-c/FuntimeDeveloper" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
+            <p>A SEO-optimized portfolio built using Nuxt.js, showcasing my projects and skills with responsive design and fast load times. 
+                <a href="https://github.com/Eswar-hub-c/FuntimeDeveloper" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            </p>
         </div>
         <div class="project">
             <img src="data-analysis-concept-illustration_114360-8053.avif" alt="Screenshot of Sentiment Analysis Tool" class="project-img">
             <h3>Sentiment Analysis Tool</h3>
             <p>A Python-based sentiment analysis tool that boosts insight accuracy by 30%, designed for businesses to make data-informed decisions.
-                <a href="https://github.com/Eswar-hub-c/sentiment-analysis" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
+                <a href="https://github.com/Eswar-hub-c/sentiment-analysis" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            </p>
         </div>
     </section>
 
@@ -84,21 +85,25 @@
         form.addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent the default form submission
 
-           emailjs.sendForm("service_smtx965", "template_ha122wr", form, "q9VZsiA3fW3VXWLu0")
-    .then(function(response) {
-        console.log("Success!", response.status, response.text);
-        alert("Message sent successfully! Thank you for reaching out.");
-        form.reset(); // Clear the form
-    }, function(error) {
-        console.error("Failed to send the message:", error); // Log detailed error info
-        alert("Failed to send the message. Please try again.");
-    });
+            emailjs.sendForm("service_smtx965", "template_ha122wr", form, "q9VZsiA3fW3VXWLu0")
+                .then(function(response) {
+                    console.log("Success!", response.status, response.text);
+                    alert("Message sent successfully! Thank you for reaching out.");
+                    form.reset(); // Clear the form
+                }, function(error) {
+                    console.error("Failed to send the message:", error); // Log detailed error info
+                    alert("Failed to send the message. Please try again.");
+                });
         });
     </script>
 
     <footer>
         <p>&copy; 2024 Eswar Chandrashekar Brammadevu. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/Eswar-hub-c" target="_blank" rel="noopener noreferrer">GitHub</a> |
+            <a href="https://www.linkedin.com/in/eswar-chandrashekar-brammadevu-python-developer/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+            <a href="https://x.com/CHANDRA09837258" target="_blank" rel="noopener noreferrer">X</a>
+        </div>
     </footer>
-
 </body>
 </html>
