@@ -3,96 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eswar Chandrashekar Brammadevu - Web Developer focused on creating interactive, responsive websites.">
+    <meta property="og:title" content="Eswar Chandrashekar Brammadevu - Web Developer">
+    <meta property="og:description" content="Portfolio of Eswar Chandrashekar Brammadevu showcasing skills in web development, React, and JavaScript.">
     <title>Eswar Chandrashekar Brammadevu - Web Developer</title>
     <link rel="stylesheet" href="index.css"> <!-- Link to an external CSS file for styling -->
 </head>
 <body>
     <!-- Navbar with toggle for mobile view -->
-<nav>
-    <h1>Eswar Chandrashekar Brammadevu</h1>
-    <div class="nav-toggle">☰</div>
-    <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
-<!-- Skills Section with Progress Bars -->
-<section id="home">
-    <div class="home-content">
+    <nav aria-label="Main Navigation">
         <h1>Eswar Chandrashekar Brammadevu</h1>
-        <p>A passionate web developer focused on building responsive, interactive websites.</p>
-        <img src="image.png_0.webp" width="640" height="640">
-    </div>
-    <div class="skills">
-        <h2>Skills</h2>
-        <div class="skills-bar" data-skill-level="85">HTML - 85%</div>
-        <div class="skills-bar" data-skill-level="80">CSS - 80%</div>
-        <div class="skills-bar" data-skill-level="75">JavaScript - 75%</div>
-        <div class="skills-bar" data-skill-level="70">React - 70%</div>
-    </div>
-</section>
+        <div class="nav-toggle" aria-label="Toggle navigation menu">☰</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Skills Section with Progress Bars -->
+    <section id="home">
+        <div class="home-content">
+            <h1>Eswar Chandrashekar Brammadevu</h1>
+            <p>A passionate web developer focused on building responsive, interactive websites.</p>
+            <img src="image.png_0.webp" width="640" height="640" alt="Profile image of Eswar Chandrashekar">
+        </div>
+        <div class="skills">
+            <h2>Skills</h2>
+            <div class="skills-bar" data-skill-level="85">HTML - 85%</div>
+            <div class="skills-bar" data-skill-level="80">CSS - 80%</div>
+            <div class="skills-bar" data-skill-level="75">JavaScript - 75%</div>
+            <div class="skills-bar" data-skill-level="70">React - 70%</div>
+        </div>
+    </section>
+
     <!-- Portfolio Page Section -->
     <section id="portfolio">
         <h2>Portfolio</h2>
         <div class="project">
-            <img src="image.png" alt="Personal Portfolio Website" class="project-img">
+            <img src="image.png" alt="Screenshot of Personal Portfolio Website" class="project-img">
             <h3>Personal Portfolio Website</h3>
-            <p>A SEO-optimized portfolio built using Nuxt.js, showcasing my projects and skills with responsive design and fast load times. <a href="https://github.com/yourportfolio" target="_blank">View on GitHub</a></p>
+            <p>A SEO-optimized portfolio built using Nuxt.js, showcasing my projects and skills with responsive design and fast load times. <a href="https://github.com/yourportfolio" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
         </div>
         <div class="project">
-            <img src="data-analysis-concept-illustration_114360-8053.avif" alt="Sentiment Analysis Tool" class="project-img">
+            <img src="data-analysis-concept-illustration_114360-8053.avif" alt="Screenshot of Sentiment Analysis Tool" class="project-img">
             <h3>Sentiment Analysis Tool</h3>
-            <p>A Python-based sentiment analysis tool that boosts insight accuracy by 30%, designed for businesses to make data-informed decisions. <a href="https://github.com/yoursentimenttool" target="_blank">View on GitHub</a></p>
+            <p>A Python-based sentiment analysis tool that boosts insight accuracy by 30%, designed for businesses to make data-informed decisions. <a href="https://github.com/yoursentimenttool" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
         </div>
-        <!-- Add more projects here -->
     </section>
 
     <!-- Contact Form -->
-<!-- Contact Form -->
-<form id="contact-form">
-    <label for="name">Your Name</label>
-    <input type="text" id="name" name="name" autocomplete="name" required>
-    
-    <label for="email">Your Email</label>
-    <input type="email" id="email" name="email" autocomplete="email" required>
-    
-    <label for="message">Your Message</label>
-    <textarea id="message" name="message" autocomplete="off" required></textarea>
-    
-    <button type="submit">Send Message</button>
-</form>
+    <section id="contact">
+        <form id="contact-form" aria-label="Contact Form">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+            
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" autocomplete="off" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
-<!-- Add the EmailJS script -->
-<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-    // Initialize EmailJS with your public key
-    emailjs.init("q9VZsiA3fW3VXWLu0");  // Replace with your EmailJS public key
+    <!-- Add the EmailJS script -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with your public key
+        emailjs.init("q9VZsiA3fW3VXWLu0");  // Replace with your EmailJS public key
 
-    // Get the form element
-    const form = document.getElementById("contact-form");
+        // Get the form element
+        const form = document.getElementById("contact-form");
 
-    // Handle the form submission
-    form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent the default form submission
+        // Handle the form submission
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
 
-        // Log the form values for debugging
-        console.log("Name:", document.getElementById("name").value);
-        console.log("Email:", document.getElementById("email").value);
-        console.log("Message:", document.getElementById("message").value);
-
-        // Send the form data to EmailJS using sendForm
-        emailjs.sendForm("service_smtx965", "template_ha122wr", form, "q9VZsiA3fW3VXWLu0")
-            .then(function(response) {
-                alert("Message sent successfully! Thank you for reaching out.");
-                form.reset(); // Clear the form
-            }, function(error) {
-                console.log("Error:", error); // Log error details to debug
-                alert("Failed to send the message. Please try again.");
-            });
-    });
-</script>
+            // Send the form data to EmailJS using sendForm
+            emailjs.sendForm("service_smtx965", "template_ha122wr", form, "q9VZsiA3fW3VXWLu0")
+                .then(function(response) {
+                    alert("Message sent successfully! Thank you for reaching out.");
+                    form.reset(); // Clear the form
+                }, function(error) {
+                    console.log("Error:", error); // Log error details to debug
+                    alert("Failed to send the message. Please try again.");
+                });
+        });
+    </script>
 
     <footer>
         <p>&copy; 2024 Eswar Chandrashekar Brammadevu. All rights reserved.</p>
