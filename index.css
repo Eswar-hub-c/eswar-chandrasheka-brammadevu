@@ -58,6 +58,14 @@ nav ul li a:hover {
 }
 
 /* Flexbox layout for content */
+
+.home H1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
 .home-content {
     display: flex;
     align-items: center;
