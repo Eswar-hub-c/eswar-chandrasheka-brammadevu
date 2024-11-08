@@ -79,12 +79,6 @@ nav ul li a:hover {
 .text-content {
     text-align: left;
 }
-
-.text-content h1 {
-    font-size: 2.5rem;
-    margin: 0; /* Remove default margin */
-}
-
 .text-content p {
     font-size: 1.25rem;
     margin: 0.5rem 0 2rem 0; /* Space below h1 and before buttons */
