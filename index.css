@@ -61,9 +61,8 @@ nav ul li a:hover {
 
 .home H1 {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
+    font-size: 3rem;
+
 }
 
 .home-content {
